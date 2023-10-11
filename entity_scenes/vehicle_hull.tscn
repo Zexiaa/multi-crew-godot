@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://y2urc2wd25do"]
+
+[ext_resource type="Script" path="res://scripts/Driver.cs" id="1_7doo2"]
+[ext_resource type="Texture2D" uid="uid://d2382253hvr6g" path="res://sprites/playerTank/TopDown_soldier_tank_body.png" id="2_eedag"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ud7fo"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = false
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/1/watch = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_xce8w"]
+size = Vector2(100, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi408"]
+size = Vector2(100, 50)
+
+[node name="VehicleHull" type="Area2D"]
+script = ExtResource("1_7doo2")
+rotationSpeed = 2.0
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ud7fo")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("QuadMesh_xce8w")
+texture = ExtResource("2_eedag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mi408")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

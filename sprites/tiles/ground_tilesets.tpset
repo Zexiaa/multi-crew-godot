@@ -1,0 +1,513 @@
+{
+	"textures": [
+		{
+			"image": "ground_tilesets.png",
+			"size": {
+				"w": 1005,
+				"h": 1034
+			},
+			"sprites": [
+				{
+					"filename": "Ground_Tile_01_A.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ground_Tile_01_B.png",
+					"region": {
+						"x": 259,
+						"y": 1,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ground_Tile_01_C.png",
+					"region": {
+						"x": 517,
+						"y": 1,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_01.png",
+					"region": {
+						"x": 775,
+						"y": 1,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Hedge_B_03.png",
+					"region": {
+						"x": 905,
+						"y": 1,
+						"w": 32,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 222
+					}
+				},
+				{
+					"filename": "Hedge_C_03.png",
+					"region": {
+						"x": 939,
+						"y": 1,
+						"w": 32,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 225
+					}
+				},
+				{
+					"filename": "Hedge_A_03.png",
+					"region": {
+						"x": 973,
+						"y": 1,
+						"w": 31,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 225,
+						"h": 225
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_02.png",
+					"region": {
+						"x": 775,
+						"y": 131,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ground_Tile_02_A.png",
+					"region": {
+						"x": 1,
+						"y": 259,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ground_Tile_02_B.png",
+					"region": {
+						"x": 259,
+						"y": 259,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ground_Tile_02_C.png",
+					"region": {
+						"x": 517,
+						"y": 259,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_03.png",
+					"region": {
+						"x": 775,
+						"y": 261,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_04.png",
+					"region": {
+						"x": 775,
+						"y": 391,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Hedge_A_01.png",
+					"region": {
+						"x": 1,
+						"y": 517,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Hedge_B_01.png",
+					"region": {
+						"x": 259,
+						"y": 517,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Hedge_C_01.png",
+					"region": {
+						"x": 517,
+						"y": 517,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_05.png",
+					"region": {
+						"x": 775,
+						"y": 521,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_06.png",
+					"region": {
+						"x": 775,
+						"y": 651,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_07.png",
+					"region": {
+						"x": 1,
+						"y": 775,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_08.png",
+					"region": {
+						"x": 131,
+						"y": 775,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_A_09.png",
+					"region": {
+						"x": 261,
+						"y": 775,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_01.png",
+					"region": {
+						"x": 391,
+						"y": 775,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_02.png",
+					"region": {
+						"x": 521,
+						"y": 775,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_03.png",
+					"region": {
+						"x": 651,
+						"y": 781,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_04.png",
+					"region": {
+						"x": 781,
+						"y": 781,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_05.png",
+					"region": {
+						"x": 1,
+						"y": 905,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_06.png",
+					"region": {
+						"x": 131,
+						"y": 905,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_07.png",
+					"region": {
+						"x": 261,
+						"y": 905,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_08.png",
+					"region": {
+						"x": 391,
+						"y": 905,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Decor_Tile_B_09.png",
+					"region": {
+						"x": 521,
+						"y": 905,
+						"w": 128,
+						"h": 128
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Hedge_B_02.png",
+					"region": {
+						"x": 651,
+						"y": 911,
+						"w": 256,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 215
+					}
+				},
+				{
+					"filename": "Hedge_A_02.png",
+					"region": {
+						"x": 651,
+						"y": 954,
+						"w": 256,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 219
+					}
+				},
+				{
+					"filename": "Hedge_C_02.png",
+					"region": {
+						"x": 651,
+						"y": 993,
+						"w": 256,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 220
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:f9fda0dc5fe4aa63e2bf32d002975dab:c8a8908e7a7839beeffa6f3464aa2dec:9a94dbc7248736e973450a46de409205$"
+	}
+}
