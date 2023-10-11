@@ -28,17 +28,17 @@ public partial class Driver : PlayerInput
         velocity = Vector2.Zero;
         DetectInput();
 
-		Position += velocity * (float)delta;
+		Position +=  velocity * (float)delta;
     }
 
     public override void MoveForward()
     {
-        velocity.X += 1;
+        velocity += Transform.X * speed;
     }
 
     public override void MoveBackward()
     {
-        velocity.X -= 1;
+        velocity -= Transform.X * speed;
     }
 
     public override void MoveLeft()

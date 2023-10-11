@@ -16,6 +16,9 @@ public partial class PlayerInput : Node2D
 
         if (Input.IsActionPressed("move_left"))
             MoveLeft();
+
+        if (Input.IsActionPressed("left_click"))
+            LeftClick();
     }
 
     public virtual void MoveForward()
@@ -34,6 +37,11 @@ public partial class PlayerInput : Node2D
     }
 
     public virtual void MoveRight()
+    {
+
+    }
+
+    public virtual void LeftClick()
     {
 
     }

@@ -15,25 +15,28 @@ public partial class SceneManager : Node2D
 	[Export]
 	private Node2D startPosition;
 
+    private Driver driverPlayer;
+    private Gunner gunnerPlayer;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
         foreach (PlayerInfo playerInfo in GameManager.Players)
 		{
-			PlayerInput currentPlayer;
-
             if (playerInfo.crewPosition == PlayerInfo.ECrewPosition.Driver)
 			{
-                currentPlayer = vehicleHullScene.Instantiate<Driver>();
-			}
+                driverPlayer = vehicleHullScene.Instantiate<Driver>();
+                driverPlayer.Name = playerInfo.Id.ToString();
+                AddChild(driverPlayer);
+                driverPlayer.GlobalPosition = startPosition.GlobalPosition;
+            }
 			else
 			{
-                currentPlayer = vehicleTurretScene.Instantiate<PlayerInput>();
-			}
-
-            currentPlayer.Name = playerInfo.Id.ToString();
-			AddChild(currentPlayer);
-            currentPlayer.GlobalPosition = startPosition.GlobalPosition;
+                gunnerPlayer = vehicleTurretScene.Instantiate<Gunner>();
+                gunnerPlayer.Name = playerInfo.Id.ToString();
+                gunnerPlayer.SetHull(driverPlayer);
+                AddChild(gunnerPlayer);
+            }
 		}
     }
 

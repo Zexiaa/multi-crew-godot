@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bojrunyof37gd"]
 
-[ext_resource type="Script" path="res://scripts/PlayerInput.cs" id="1_ypr5x"]
+[ext_resource type="Script" path="res://scripts/Player/Gunner.cs" id="1_emgs4"]
 [ext_resource type="Texture2D" uid="uid://c077dcx0dupe6" path="res://sprites/playerTank/TopDown_soldier_tank_turrent.png" id="3_thdod"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xce8w"]
@@ -13,13 +13,14 @@ properties/0/sync = true
 properties/0/watch = false
 
 [node name="VehicleTurret" type="Area2D"]
-script = ExtResource("1_ypr5x")
+script = ExtResource("1_emgs4")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(-32, 0)
+position = Vector2(33, -5.91172e-11)
+rotation = -3.14159
 scale = Vector2(1.96755, 0.603068)
 mesh = SubResource("QuadMesh_xce8w")
 texture = ExtResource("3_thdod")
