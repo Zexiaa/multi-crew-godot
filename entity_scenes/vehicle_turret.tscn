@@ -12,8 +12,10 @@ properties/0/spawn = true
 properties/0/sync = true
 properties/0/watch = false
 
-[node name="VehicleTurret" type="Area2D"]
+[node name="VehicleTurret" type="Area2D" node_paths=PackedStringArray("camera", "turret")]
 script = ExtResource("1_emgs4")
+camera = NodePath("Camera2D")
+turret = NodePath("MeshInstance2D")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

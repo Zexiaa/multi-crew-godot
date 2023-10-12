@@ -24,10 +24,10 @@ script = ExtResource("1_kvscl")
 rotationSpeed = 1.0
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_ud7fo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 rotation = 3.14159
