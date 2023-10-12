@@ -3,6 +3,9 @@ using System;
 
 public partial class PlayerInput : Node2D
 {
+    [Export]
+    protected Camera2D camera;
+
     protected void DetectInput()
     {
         if (Input.IsActionPressed("move_forward"))

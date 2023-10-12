@@ -3,10 +3,7 @@ using System;
 
 public partial class Gunner : PlayerInput
 {
-    private Node2D hull;
-
-    [Export]
-    private Camera2D camera;
+    private Node2D turretAnchor;
 
     [Export]
     private Node2D turret;
@@ -24,7 +21,7 @@ public partial class Gunner : PlayerInput
 
     public override void _Process(double delta)
     {
-        Position = hull.Position;
+        Position = turretAnchor.GlobalPosition;
 
         if (GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() !=
             Multiplayer.GetUniqueId())
@@ -44,9 +41,9 @@ public partial class Gunner : PlayerInput
         //QueueRedraw();
     }
 
-    public void SetHull(Node2D _hull)
+    public void SetAnchor(Node2D anchor)
     {
-        hull = _hull;
+        turretAnchor = anchor;
     }
 
     private void FaceCursor()
@@ -59,7 +56,7 @@ public partial class Gunner : PlayerInput
 
     private void MoveCamera()
     {
-        Vector2 direction = (cursorPos - hull.Position);
-        camera.GlobalPosition = hull.Position + direction/2;
+        Vector2 direction = (cursorPos - turretAnchor.GlobalPosition);
+        camera.GlobalPosition = turretAnchor.GlobalPosition + direction/2;
     }
 }

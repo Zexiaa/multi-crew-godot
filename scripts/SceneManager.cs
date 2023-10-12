@@ -34,7 +34,7 @@ public partial class SceneManager : Node2D
 			{
                 gunnerPlayer = vehicleTurretScene.Instantiate<Gunner>();
                 gunnerPlayer.Name = playerInfo.Id.ToString();
-                gunnerPlayer.SetHull(driverPlayer);
+                gunnerPlayer.SetAnchor(driverPlayer.GetNode<Node2D>("turretAnchor"));
                 AddChild(gunnerPlayer);
             }
 		}

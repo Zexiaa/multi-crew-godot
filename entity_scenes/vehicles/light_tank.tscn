@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5dj4lv7gsrk8"]
+
+[ext_resource type="Texture2D" uid="uid://b34lmbdeyk6ml" path="res://sprites/tracks/Track_4_A.png" id="1_vcvlt"]
+[ext_resource type="Texture2D" uid="uid://cy35xuhmud3na" path="res://sprites/playerTank/Hull_04.png" id="2_70lut"]
+[ext_resource type="Texture2D" uid="uid://dgr7lij3gw2po" path="res://sprites/playerTank/Gun_04.png" id="3_wrrjy"]
+
+[node name="lightTank" type="Node2D"]
+
+[node name="Track4A" type="Sprite2D" parent="."]
+position = Vector2(405, 385)
+scale = Vector2(0.738095, 0.738095)
+texture = ExtResource("1_vcvlt")
+
+[node name="Track4A2" type="Sprite2D" parent="."]
+position = Vector2(464, 385)
+scale = Vector2(0.738095, 0.738095)
+texture = ExtResource("1_vcvlt")
+
+[node name="Hull04" type="Sprite2D" parent="."]
+position = Vector2(434, 385)
+texture = ExtResource("2_70lut")
+
+[node name="Gun04" type="Sprite2D" parent="."]
+position = Vector2(434, 364)
+texture = ExtResource("3_wrrjy")

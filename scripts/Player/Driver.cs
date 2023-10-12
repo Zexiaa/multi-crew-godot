@@ -17,6 +17,10 @@ public partial class Driver : PlayerInput
     public override void _Ready()
     {
         GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").SetMultiplayerAuthority(int.Parse(Name));
+
+        if (GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() ==
+            Multiplayer.GetUniqueId())
+            camera.MakeCurrent();
     }
 
     public override void _Process(double delta)

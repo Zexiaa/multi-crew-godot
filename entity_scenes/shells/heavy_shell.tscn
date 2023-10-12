@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0q0jvrp474sl"]
+
+[ext_resource type="Texture2D" uid="uid://kp7ir2lcbnyu" path="res://sprites/shells/Heavy_Shell.png" id="1_t4sin"]
+
+[node name="heavy_shell" type="Node2D"]
+
+[node name="HeavyShell" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_t4sin")

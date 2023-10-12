@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgd4dnf447w53"]
+
+[ext_resource type="Texture2D" uid="uid://drfvj564xaoi5" path="res://sprites/playerTank/Hull_03.png" id="1_en135"]
+[ext_resource type="Texture2D" uid="uid://b2ivvin0tot5t" path="res://sprites/playerTank/Gun_06.png" id="2_nuadg"]
+
+[node name="car" type="Node2D"]
+
+[node name="Hull03" type="Sprite2D" parent="."]
+position = Vector2(601, 363)
+texture = ExtResource("1_en135")
+
+[node name="Gun06" type="Sprite2D" parent="."]
+position = Vector2(600, 353)
+texture = ExtResource("2_nuadg")
