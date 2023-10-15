@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://kye0qb840bfc" path="res://sprites/playerTank/Hull_08.png" id="3_6wk1r"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ud7fo"]
-properties/0/path = NodePath(".:position")
+properties/0/path = NodePath(".:syncPos")
 properties/0/spawn = true
 properties/0/sync = true
 properties/0/watch = false
-properties/1/path = NodePath(".:rotation")
+properties/1/path = NodePath(".:syncRot")
 properties/1/spawn = true
 properties/1/sync = true
 properties/1/watch = false
@@ -23,6 +23,8 @@ rotationSpeed = 1.0
 camera = NodePath("Camera2D")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.1
+delta_interval = 0.1
 replication_config = SubResource("SceneReplicationConfig_ud7fo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -53,4 +55,4 @@ texture = ExtResource("3_6wk1r")
 [node name="turretAnchor" type="Node2D" parent="."]
 position = Vector2(-2.5, 0)
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

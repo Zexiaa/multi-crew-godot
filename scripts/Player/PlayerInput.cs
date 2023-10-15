@@ -3,6 +3,8 @@ using System;
 
 public partial class PlayerInput : Node2D
 {
+    public static float SyncWeight = .1f;
+
     [Export]
     protected Camera2D camera;
 

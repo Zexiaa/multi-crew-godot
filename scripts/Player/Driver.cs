@@ -14,6 +14,12 @@ public partial class Driver : PlayerInput
 
 	private Vector2 velocity;
 
+    [NonSerialized]
+    public Vector2 syncPos = Vector2.Zero;
+
+    [NonSerialized]
+    public float syncRot = 0;
+
     public override void _Ready()
     {
         GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").SetMultiplayerAuthority(int.Parse(Name));
@@ -27,12 +33,18 @@ public partial class Driver : PlayerInput
     {
         if (GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() !=
             Multiplayer.GetUniqueId())
+        {
+            GlobalPosition = GlobalPosition.Lerp(syncPos, SyncWeight);
+            GlobalRotation = Mathf.Lerp(GlobalRotation, syncRot, SyncWeight);
             return;
+        }
 
         velocity = Vector2.Zero;
         DetectInput();
 
 		Position +=  velocity * (float)delta;
+        syncPos = GlobalPosition;
+        syncRot = GlobalRotation;
     }
 
     public override void MoveForward()

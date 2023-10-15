@@ -1,23 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://bojrunyof37gd"]
+[gd_scene load_steps=5 format=3 uid="uid://bojrunyof37gd"]
 
 [ext_resource type="Script" path="res://scripts/Player/Gunner.cs" id="1_emgs4"]
 [ext_resource type="Texture2D" uid="uid://lxg68r5xd3tq" path="res://sprites/playerTank/Gun_07.png" id="2_347ee"]
+[ext_resource type="PackedScene" uid="uid://d0q0jvrp474sl" path="res://entity_scenes/shells/heavy_shell.tscn" id="2_m1sup"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_glpga"]
-properties/0/path = NodePath(".:rotation")
+properties/0/path = NodePath(".:syncRot")
 properties/0/spawn = true
 properties/0/sync = true
 properties/0/watch = false
 
-[node name="VehicleTurret" type="Area2D" node_paths=PackedStringArray("turret", "camera")]
+[node name="VehicleTurret" type="Area2D" node_paths=PackedStringArray("turret", "exitPoint", "camera")]
 script = ExtResource("1_emgs4")
 turret = NodePath("Gun07")
+exitPoint = NodePath("exitPoint")
+shellScene = ExtResource("2_m1sup")
 camera = NodePath("Camera2D")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.1
+delta_interval = 0.1
 replication_config = SubResource("SceneReplicationConfig_glpga")
 
 [node name="Gun07" type="Sprite2D" parent="."]
@@ -25,3 +30,6 @@ position = Vector2(9, -6.82121e-13)
 rotation = 1.57079
 scale = Vector2(0.199636, 0.199636)
 texture = ExtResource("2_347ee")
+
+[node name="exitPoint" type="Node2D" parent="."]
+position = Vector2(31, 0)

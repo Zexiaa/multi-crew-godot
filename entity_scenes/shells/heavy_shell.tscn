@@ -1,10 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0q0jvrp474sl"]
+[gd_scene load_steps=5 format=3 uid="uid://d0q0jvrp474sl"]
 
+[ext_resource type="Script" path="res://scripts/PhysicsShell.cs" id="1_m8pxv"]
 [ext_resource type="Texture2D" uid="uid://kp7ir2lcbnyu" path="res://sprites/shells/Heavy_Shell.png" id="1_t4sin"]
 
-[node name="heavy_shell" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0pfa"]
+size = Vector2(12, 4)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_18x4p"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = false
+
+[node name="heavy_shell" type="StaticBody2D"]
+script = ExtResource("1_m8pxv")
+metadata/_edit_group_ = true
 
 [node name="HeavyShell" type="Sprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_t4sin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g0pfa")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_18x4p")
